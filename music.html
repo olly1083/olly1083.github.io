@@ -12,6 +12,7 @@
         <a href="music.html">Music</a>
         <a href="games.html">Games</a>
         <a href="info.html">Info</a>
+        <a href="#" class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</a>
     </div>
     <div class="menu-icon" onclick="openNav()">☰</div>
     <div id="mySidebar" class="sidebar">
@@ -20,25 +21,45 @@
         <a href="music.html">Music</a>
         <a href="games.html">Games</a>
         <a href="info.html">Info</a>
+        <a href="#" class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</a>
     </div>
     <div class="content">
         <h1>Music Page</h1>
-        <p>Check out my latest tracks!</p>
+        <p>Check out my latest music!</p>
         <div class="audio-player">
             <audio controls>
-                <source src="your_music_file.mp3" type="audio/mp3">
+                <source src="Assets/Music/LifeSwing.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
     </div>
     <script>
+        // Function to open the sidebar
         function openNav() {
             document.getElementById("mySidebar").style.width = "250px";
         }
-
+    
+        // Function to close the sidebar
         function closeNav() {
             document.getElementById("mySidebar").style.width = "0";
         }
-    </script>
+    
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            if (document.body.classList.contains("dark-mode")) {
+                localStorage.setItem("darkMode", "enabled");
+            } else {
+                localStorage.setItem("darkMode", "disabled");
+            }
+        }
+    
+        // Check for saved dark mode state on page load
+        window.onload = function() {
+            if (localStorage.getItem("darkMode") === "enabled") {
+                document.body.classList.add("dark-mode");
+            }
+        }
+    </script>    
 </body>
 </html>

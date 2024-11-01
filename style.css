@@ -2,6 +2,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Dark theme */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
 }
 
 /* Top bar for desktop */
@@ -23,6 +31,10 @@ body {
 
 .top-bar a:hover {
     background-color: #575757;
+}
+
+.top-bar .dark-mode-toggle {
+    cursor: pointer;
 }
 
 /* Sidebar for mobile */
@@ -51,6 +63,10 @@ body {
 
 .sidebar a:hover {
     background-color: #575757;
+}
+
+.sidebar .dark-mode-toggle {
+    cursor: pointer;
 }
 
 .sidebar .closebtn {
@@ -102,4 +118,20 @@ body {
 /* Adjust the audio player to avoid blocking the sidebar */
 .audio-player {
     margin-top: 20px; /* Adjust as necessary */
+}
+
+/* Dark mode for elements */
+body.dark-mode .top-bar,
+body.dark-mode .sidebar {
+    background-color: #222;
+}
+
+body.dark-mode .top-bar a,
+body.dark-mode .sidebar a {
+    color: #ddd;
+}
+
+body.dark-mode .top-bar a:hover,
+body.dark-mode .sidebar a:hover {
+    background-color: #575757;
 }
