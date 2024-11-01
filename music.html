@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Repeat Website</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <a href="index.html">Home</a>
+        <a href="music.html">Music</a>
+        <a href="games.html">Games</a>
+        <a href="info.html">Info</a>
+    </div>
+    <div class="menu-icon" onclick="openNav()">☰</div>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.html">Home</a>
+        <a href="music.html">Music</a>
+        <a href="games.html">Games</a>
+        <a href="info.html">Info</a>
+    </div>
+    <div class="content">
+        <h1>Music Page</h1>
+        <p>Check out my latest tracks!</p>
+        <div class="audio-player">
+            <audio controls>
+                <source src="your_music_file.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+</body>
+</html>
