@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Repeat's Website</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <a href="index.html">Home</a>
+        <a href="music.html">Music</a>
+        <a href="games.html">Games</a>
+        <a href="info.html">Info</a>
+        <a href="chat.html">chat</a>
+        <a href="#" class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</a>
+    </div>
+    <div class="menu-icon" onclick="openNav()">☰</div>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.html">Home</a>
+        <a href="music.html">Music</a>
+        <a href="games.html">Games</a>
+        <a href="info.html">Info</a>
+        <a href="chat.html">chat</a>
+        <a href="#" class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</a>
+    </div>
+    <div class="content">
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+            this.page.url = ' https://olly1083.github.io/chat.html';  
+            this.page.identifier = 'chat'; 
+          };
+        
+          (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://repeatsite.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+        
+    </div>
+    <script>
+        // Function to open the sidebar
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+    
+        // Function to close the sidebar
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            if (document.body.classList.contains("dark-mode")) {
+                localStorage.setItem("darkMode", "enabled");
+            } else {
+                localStorage.setItem("darkMode", "disabled");
+            }
+        }
+    
+        // Check for saved dark mode state on page load
+        window.onload = function() {
+            if (localStorage.getItem("darkMode") === "enabled") {
+                document.body.classList.add("dark-mode");
+            }
+        }
+    </script>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

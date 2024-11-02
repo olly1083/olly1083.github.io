@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Dark theme */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Top bar for desktop */
+.top-bar {
+    background-color: #333;
+    overflow: hidden;
+    display: none;
+}
+
+.top-bar a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.top-bar a:hover {
+    background-color: #575757;
+    transform: translateY(-3px);
+}
+
+/* Sidebar for mobile */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: none;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: transform 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+    transform: translateY(-3px);
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+.menu-icon {
+    display: none;
+}
+
+/* Show top-bar on desktop */
+@media (min-width: 600px) {
+    .top-bar {
+        display: block;
+    }
+    .content {
+        margin-left: 0;
+    }
+}
+
+/* Show sidebar and menu icon on mobile */
+@media (max-width: 600px) {
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 14px 16px;
+        font-size: 18px;
+        color: white;
+        background-color: #333;
+        text-align: center;
+        cursor: pointer;
+    }
+    .sidebar {
+        display: block;
+    }
+}
+
+/* Dark mode for elements */
+body.dark-mode .top-bar,
+body.dark-mode .sidebar {
+    background-color: #222;
+}
+
+body.dark-mode .top-bar a,
+body.dark-mode .sidebar a {
+    color: #ddd;
+}
+
+body.dark-mode .top-bar a:hover,
+body.dark-mode .sidebar a:hover {
+    background-color: #575757;
+}
+
+
+.content {
+    padding: 20px;
+    margin-top: 40px; /* Add margin to avoid overlapping */
+}
+
+/* Adjust the audio player to avoid blocking the sidebar */
+.audio-player {
+    margin-top: 20px; /* Adjust as necessary */
+}
+
+/* Hover effect for all text */
+.content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    transition: transform 0.2s, font-size 0.2s;
+}
+
+.content p:hover, .content h2:hover, .content h3:hover, .content h4:hover, .content h5:hover, .content h6:hover {
+    transform: translateY(3px);
+    font-size: 1.3em;
+}
+
+.content .content h1:hover{
+    transform: translateY(3px);
+    font-size: 10em;
+}
+
